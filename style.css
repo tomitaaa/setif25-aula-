@@ -1,0 +1,37 @@
+body {
+  background-color: #111111;
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: hsl(240, 100%, 50%);
+  padding: 1px;
+  font-size: 1.8em;
+}
+
+main {
+  max-width: 900px;
+  background-color: #222222;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #000000;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.negrito {
+  font-weight: bold;
+}
+
+.cards {
+}
+
+.card {
+  background-color: #414040;
+  width: 250px;
+  border-radius: 10px;
+  bow-shadow: 0 0 10px #414040;
+}
