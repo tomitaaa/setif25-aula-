@@ -27,11 +27,48 @@ main {
 }
 
 .cards {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card {
+  margin: 0 auto;
+  padding: 10px;
   background-color: #414040;
   width: 250px;
   border-radius: 10px;
   bow-shadow: 0 0 10px #414040;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.botao {
+  background-color: #ee650a;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 20px;
+  font-size: 1.5em;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.botao:hover {
+  background-color: #ff7e00;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 95%;
+  }
+  .botao {
+    background-color: aqua;
+  }
 }
