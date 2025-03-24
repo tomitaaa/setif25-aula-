@@ -1,10 +1,12 @@
+
 <html>
 
 <head>
     <title>TechConf 2025 : A revolução da Tecnologia</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link rel="stylesheet" href="style.css"/>
 
-<body>
+<body data-theme="light">
     <header>
         <h1>
             SETIF 2025 - A Revolução da Tecnologia
@@ -19,6 +21,7 @@
 
     <button class="botao">Inscreva-se</button>
     <button class="botao">Saiba Mais</button>
+    <button onClick="alterarTema()" class="botao">Alterar Tema</button>
 
     <div class="cards">
         <div class="card">
@@ -39,6 +42,29 @@
     </div>
 
     </main>
+
+    <!-- <script>
+        const botao = document.querySelector('.botao');
+        const body = document.querySelector('body');
+
+        botao.addEventListener('click', () => {
+            if (body.getAttribute('data-theme') === 'light') {
+                body.setAttribute('data-theme', 'dark');
+            } else {
+                body.setAttribute('data-theme', 'light');
+            }
+        });
+    </script> -->
+
+    <script>
+        function alterarTema(){
+            const tema = document.body.getAttribute("data-theme");
+            const novoTema = tema == "light" ? "dark" : "light";
+            document.body.setAttribute("data-theme", novoTema);
+
+        }
+    </script>
+
 </body>
 
 </html>

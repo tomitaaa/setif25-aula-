@@ -1,0 +1,11 @@
+:root {
+  --bg-color-body: #000000;
+  --bg-color-container: #222;
+  --text-color: #ccb9b9;
+}
+
+[data-theme="light"] {
+  --bg-color-body: #9b9b9b;
+  --bg-color-container: #ffffff;
+  --text-color: #5e5454;
+}
