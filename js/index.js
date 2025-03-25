@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", (event) => {
+  buscarInscritos();
+});
+
 function alterarTema() {
   const tema = document.body.getAttribute("data-theme");
   const novoTema = tema == "light" ? "dark" : "light";
@@ -9,8 +13,16 @@ function alterarTema() {
     btAlterarTema.textContent = "Dark";
   }
   function buscarInscritos() {
-    fetch("json/inscritos.json").then((res) => {
-      console.log(res);
-    });
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((res) => {
+        const divInscritos = document.getElementById("inscritos");
+        res.forEach((user) => {
+          const novoParagrafo = document.createElement("p");
+          novoParagrafo.textContent = `Nome: ${user.name}`;
+          divInscritos.appendChild(novoParagrafo);
+        });
+      })
+      .catch((e) => console.log(e));
   }
 }

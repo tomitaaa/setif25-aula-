@@ -1,8 +1,7 @@
 [
-{"nome":"José" },
-{"nome":"Maria" },
-{"nome":"Ana" },
-{"nome":"Alice" },
-{"nome":"Antonio" },
-
-]
+  { nome: "José" },
+  { nome: "Maria" },
+  { nome: "Ana" },
+  { nome: "Alice" },
+  { nome: "Antonio" },
+];

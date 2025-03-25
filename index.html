@@ -1,7 +1,9 @@
-
+<!DOCTYPE html>
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechConf 2025 : A revolução da Tecnologia</title>
     
     <link rel="stylesheet" href="css/style.css"/>
@@ -13,16 +15,19 @@
         </h1>
     </header>
    <main>
-    <img src="images/logo.png" alt="Logo da TechConf 2025">
+
+    <img onclick="buscarInscritos()" class="banner" src="images/logo.png" alt="Logo da TechConf 2025">
         <h1>O evento tech mais esperado do ano!</h1>  
         <p>Participe da Setif 2025 e veja tedências que irão moldar o futuro da tecnologia</p>
         <p><span class="negrito">Data: </span>10 de outubro de 2025</p>
         <p><span class="negrito">Local: </span>IFPR Campus Paranavaí</p>
 
+        <div class="gap" >
     <button class="botao">Inscreva-se</button>
     <button class="botao">Saiba Mais</button>
     <button id="btAlterarTema" onClick="alterarTema()" class="botao">Dark</button>
 
+    </div>
     <div class="cards">
         <div class="card">
             <img src="images/question.png"/>
@@ -39,6 +44,10 @@
             <h1>Workshops</h1>
             <p>Participe de workshops práticos com profissionais de tecnologia</p>
         </div>
+    </div>
+    <div id="inscritos">
+
+
     </div>
 
     </main>
