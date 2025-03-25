@@ -4,7 +4,7 @@
 <head>
     <title>TechConf 2025 : A revolução da Tecnologia</title>
     
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 
 <body data-theme="light">
     <header>
@@ -13,7 +13,7 @@
         </h1>
     </header>
    <main>
-    <img src="logo.png" alt="Logo da TechConf 2025">
+    <img src="images/logo.png" alt="Logo da TechConf 2025">
         <h1>O evento tech mais esperado do ano!</h1>  
         <p>Participe da Setif 2025 e veja tedências que irão moldar o futuro da tecnologia</p>
         <p><span class="negrito">Data: </span>10 de outubro de 2025</p>
@@ -21,50 +21,32 @@
 
     <button class="botao">Inscreva-se</button>
     <button class="botao">Saiba Mais</button>
-    <button onClick="alterarTema()" class="botao">Alterar Tema</button>
+    <button id="btAlterarTema" onClick="alterarTema()" class="botao">Dark</button>
 
     <div class="cards">
         <div class="card">
-            <img src="question.png"/>
+            <img src="images/question.png"/>
             <h1>Palestras</h1>
             <p>Especialistas do setor irão discutir tendências da tecnlogia</p>
         </div>
         <div class="card">
-            <img src="question.png"/>
+            <img src="images/question.png"/>
             <h1>Networking</h1>
             <p>Conheça pessoas que trabalham na área de tecnologia</p>
         </div>
         <div class="card">
-            <img src="question.png"/>
+            <img src="images/question.png"/>
             <h1>Workshops</h1>
             <p>Participe de workshops práticos com profissionais de tecnologia</p>
         </div>
     </div>
 
     </main>
+    <footer>
+        <p>Setif 2025 - Todos os direitos reservados</p>
 
-    <!-- <script>
-        const botao = document.querySelector('.botao');
-        const body = document.querySelector('body');
+    <script src="js/index.js"></script>
 
-        botao.addEventListener('click', () => {
-            if (body.getAttribute('data-theme') === 'light') {
-                body.setAttribute('data-theme', 'dark');
-            } else {
-                body.setAttribute('data-theme', 'light');
-            }
-        });
-    </script> -->
-
-    <script>
-        function alterarTema(){
-            const tema = document.body.getAttribute("data-theme");
-            const novoTema = tema == "light" ? "dark" : "light";
-            document.body.setAttribute("data-theme", novoTema);
-
-        }
-    </script>
-
-</body>
+</body> 
 
 </html>
