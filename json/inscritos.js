@@ -3,5 +3,5 @@
   { nome: "Maria" },
   { nome: "Ana" },
   { nome: "Alice" },
-  { nome: "Antonio" },
+  { nome: "Antônio" },
 ];
