@@ -37,6 +37,27 @@ document.addEventListener("DOMContentLoaded", (event) => {
   document.body.setAttribute("data-theme", temaLocal);
 });
 
+let idiomaAtual = "pt";
+
+function alterarIdioma() {
+  idiomaAtual = idiomaAtual == "pt" ? "en" : "pt";
+  carregarIdioma(idiomaAtual);
+}
+
+function carregarIdioma(idioma) {
+  fetch(`json/${idioma}.json`)
+    .then((data) => data.json())
+    .then((data) => {
+      traduzirPagina(data);
+    });
+
+  function traduzirPagina(Linguagem) {
+    document.querySelectorAll("[data-i18n]").forEach((elemento) => {
+      console.log(elemento);
+    });
+  }
+}
+
 function construirModal() {
   const botaoSaibaMais = document.getElementById("saiba-mais");
   const modal = document.getElementById("modal");
