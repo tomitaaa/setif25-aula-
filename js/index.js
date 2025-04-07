@@ -1,34 +1,3 @@
-// document.addEventListener("DOMContentLoaded", (event) => {
-//   buscarInscritos();
-//   construirModal();
-// });
-// function construiModal() {
-//   const botaoSaibaMais = document.getElementById("saiba-mais");
-//   const modal = document.getElementById("modal");
-//   botaoSaibaMais.addEventListener("click", () => {
-//     modal.classList.remove("hidden");
-//   });
-//   window.addEventListener("click", (e) => {
-//     console.log(e.target);
-//     if (e.target == modal) {
-//       modal.classList.add("hidden");
-//     }
-//   });
-// }
-// function buscarInscritos() {
-//   // fetch("https://jsonplaceholder.typicode.com/users")
-//   fetch("json/inscritos.json")
-//     .then((res) => res.json())
-//     .then((res) => {
-//       const divInscritos = document.getElementById("inscritos");
-//       res.forEach((user) => {
-//         const novoParagrafo = document.createElement("p");
-//         novoParagrafo.textContent = `Nome: ${user.name}`;
-//         divInscritos.appendChild(novoParagrafo);
-//       });
-//     })
-//     .catch((e) => console.log(e));
-// }
 document.addEventListener("DOMContentLoaded", (event) => {
   buscarInscritos();
   construirModal();
@@ -53,7 +22,20 @@ function carregarIdioma(idioma) {
 
   function traduzirPagina(Linguagem) {
     document.querySelectorAll("[data-i18n]").forEach((elemento) => {
-      console.log(elemento);
+      const chave = elemento.getAttribute("data-i18n");
+
+      if (Linguagem[chave]) {
+        elemento.textContent = Linguagem[chave];
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-alt]").forEach((elemento) => {
+      const chave = elemento.getAttribute("data-i18n-alt");
+
+      if (Linguagem[chave]) {
+        // elemento.textContent = Linguagem[chave];
+        elemento.setAttribute("alt", linguagem[chave]);
+      }
     });
   }
 }
