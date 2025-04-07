@@ -80,7 +80,7 @@ function construirModal() {
 }
 function buscarInscritos() {
   //fetch("https://jsonplaceholder.typicode.com/users")
-  fetch("json/inscritos.js")
+  fetch("json/inscritos.json")
     .then((res) => res.json())
     .then((res) => {
       //alert("Na requisição");
